@@ -1,0 +1,24 @@
+{
+  "name": "gulp-bem-stub",
+  "version": "0.0.0",
+  "description": "gulp BEM stub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:matmuchrapna/gulp-bem-stub.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "bem"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matmuchrapna/gulp-bem-stub/issues"
+  },
+  "homepage": "https://github.com/matmuchrapna/gulp-bem-stub"
+}
