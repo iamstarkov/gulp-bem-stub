@@ -1,6 +1,6 @@
 # gulp-bem-stub
 
-This project aimed on creating tools to help you start using [bem](bem.info) with [gulp](https://github.com/gulpjs/gulp).
+This project aimed on creating tools to help you start use [bem](bem.info) with [gulp](https://github.com/gulpjs/gulp).
 
 ## Usage
 

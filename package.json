@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/matmuchrapna/gulp-bem-stub/issues"
   },
-  "homepage": "https://github.com/matmuchrapna/gulp-bem-stub"
+  "homepage": "https://github.com/matmuchrapna/gulp-bem-stub",
+  "devDependencies": {
+    "gulp": "^3.8.6"
+  }
 }
