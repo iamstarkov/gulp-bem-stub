@@ -1,7 +1,10 @@
 var gulp = require('gulp');
+var bem = require('gulp-bem')
 
-var dest = 'dist';
-var bundle = 'desktop.bundles/beta';
+var pjoin = require('path').join;
+var paths = {
+	pages: 'desktop.bundles'
+}
 
 var levels = [
 	'static/libs/bem-core',
@@ -9,15 +12,16 @@ var levels = [
 	'static/desktop.blocks'
 ];
 
-gulp.task('decl', function () {
-	var decl = bundle + '/' + '*.bemdecl.js';
-	gulp.src(decls)
-		.pipe(readDecl())
-		.pipe(readBlocks())
-		.pipe(flatten())
-
-});
-
 gulp.task('build', function () {
-
+	gulp.src('static/**/*.deps.js')
+		.pipe(depsGraph(levels))
+		.pipe(depsByPage(pjoin(pages, 'index'))
+		.pipe(fork(
+			bem.css('[BEM].css')
+				.pipe(concat())
+				.dest('[BUNDLE].css'),
+			bem.js('[BEM].js')
+				.pipe(concat())
+				.dest('[BUNDLE].js'),
+		))
 });
