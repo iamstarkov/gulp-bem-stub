@@ -5,8 +5,10 @@ var join = require('path').join;
 var concat = require('gulp-concat');
 
 var levels = [
+	/*
     'static/libs/bem-core',
     'static/libs/bem-components',
+	*/
     'static/desktop.blocks',
     'static/desktop.bundles'
 ];
