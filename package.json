@@ -1,10 +1,11 @@
 {
   "name": "gulp-bem-stub",
   "version": "0.0.0",
-  "description": "gulp BEM stub",
+  "description": "gulp BEM project stub",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd static && ../node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
@@ -12,16 +13,19 @@
   },
   "keywords": [
     "gulp",
-    "gulpplugin",
     "bem"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Vladimir Starkov",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/matmuchrapna/gulp-bem-stub/issues"
   },
   "homepage": "https://github.com/matmuchrapna/gulp-bem-stub",
   "devDependencies": {
-    "gulp": "^3.8.6"
+    "gulp": "^3.8.6",
+    "bower": "^1.3.9",
+    "gulp-bem": "0.0.0"
+  },
+  "dependencies": {
   }
 }
