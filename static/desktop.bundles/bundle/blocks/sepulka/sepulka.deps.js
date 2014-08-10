@@ -1,0 +1,7 @@
+({
+    shouldDeps: [
+        {
+            mods: { theme: 'summer' }
+        }
+    ]
+});
