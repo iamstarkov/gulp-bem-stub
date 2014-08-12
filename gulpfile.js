@@ -3,13 +3,13 @@ var bem = require('gulp-bem');
 var concat = require('gulp-concat');
 
 var levels = [
-    'desktop.blocks',
-    'desktop.bundles'
+    'static/desktop.blocks',
+    'static/desktop.bundles'
 ];
 
 gulp.task('build', function () {
-    var tree = bem.blocks('static', levels).pipe(bem.tree());
-    var deps = tree.deps('desktop.bundles/index');
+    var tree = bem.blocks(levels).pipe(bem.tree());
+    var deps = tree.deps('static/desktop.bundles/index');
 
     deps.src('{block}.css')
         .pipe(concat('index.css'))
