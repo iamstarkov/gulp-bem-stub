@@ -3,8 +3,8 @@ var bem = require('gulp-bem');
 var concat = require('gulp-concat');
 
 var levels = [
-    'static/desktop.blocks',
-    'static/desktop.bundles'
+    'desktop.blocks',
+    'desktop.bundles'
 ];
 
 gulp.task('build', function () {
