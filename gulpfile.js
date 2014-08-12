@@ -18,11 +18,11 @@ gulp.task('build', function () {
     var tree = bem.blocks(levels).pipe(bem.tree());
     var deps = tree.deps('desktop.bundles/index/sepulka');
 
-    deps.src('{block}.css')
+    deps.src('{bem}.css')
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
 
-    deps.src('{block}.js')
+    deps.src('{bem}.js')
         .pipe(concat('index.js'))
         .pipe(gulp.dest('./dist'));
 });
