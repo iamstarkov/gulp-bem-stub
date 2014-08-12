@@ -11,12 +11,12 @@ var levels = [
     'static/libs/bem-components/desktop.blocks',
     // local
     'static/desktop.blocks',
-    'static/desktop.bundles/index/blocks'
+    'static/desktop.bundles/index'
 ];
 
 gulp.task('build', function () {
     var tree = bem.blocks(levels).pipe(bem.tree());
-    var deps = tree.deps('desktop.bundles/index/blocks/sepulka');
+    var deps = tree.deps('desktop.bundles/index/sepulka');
 
     deps.src('{block}.css')
         .pipe(concat('index.css'))
