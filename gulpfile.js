@@ -15,7 +15,7 @@ var levels = [
 ];
 
 gulp.task('build', function () {
-    var tree = bem.blocks(levels).pipe(bem.tree());
+    var tree = bem.objects(levels).pipe(bem.tree());
     var deps = tree.deps('desktop.bundles/index/sepulka');
 
     deps.src('{bem}.css')
