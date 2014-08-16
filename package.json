@@ -27,5 +27,7 @@
     "gulp-bem": "^0.0.1",
     "gulp-concat": "~2.3.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-bem": "0.0.4"
+  }
 }
