@@ -4,14 +4,14 @@ var concat = require('gulp-concat');
 
 var levels = [
     // bem-core
-    'static/libs/bem-core/common.blocks',
-    'static/libs/bem-core/desktop.blocks',
+    'libs/bem-core/common.blocks',
+    'libs/bem-core/desktop.blocks',
     // bem-components
-    'static/libs/bem-components/common.blocks',
-    'static/libs/bem-components/desktop.blocks',
+    'libs/bem-components/common.blocks',
+    'libs/bem-components/desktop.blocks',
     // local
-    'static/desktop.blocks',
-    'static/desktop.bundles/index'
+    'desktop.blocks',
+    'desktop.bundles/index'
 ];
 
 gulp.task('build', function () {
