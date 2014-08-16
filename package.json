@@ -21,13 +21,10 @@
     "url": "https://github.com/matmuchrapna/gulp-bem-stub/issues"
   },
   "homepage": "https://github.com/matmuchrapna/gulp-bem-stub",
-  "devDependencies": {
+  "dependencies": {
     "gulp": "^3.8.6",
     "bower": "^1.3.9",
-    "gulp-bem": "^0.0.1",
-    "gulp-concat": "~2.3.4"
-  },
-  "dependencies": {
-    "gulp-bem": "0.0.4"
+    "gulp-concat": "~2.3.4",
+    "gulp-bem": "0.0.5"
   }
 }

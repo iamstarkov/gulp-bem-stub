@@ -14,11 +14,11 @@ var levels = [
     'desktop.bundles/index'
 ];
 
-gulp.task('build', function (cb) {
+gulp.task('build', function () {
     var tree = bem.objects(levels).pipe(bem.tree());
     var deps = tree.deps('desktop.bundles/index/sepulka');
 
-    return deps.pipe(bem.src('{bem}.css'))
+    return deps.src('{bem}.css')
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
 
