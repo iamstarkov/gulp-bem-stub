@@ -21,8 +21,4 @@ gulp.task('build', function () {
     return deps.src('{bem}.css')
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
-
-    // deps.pipe(bem.src('{bem}.js'))
-    //     .pipe(concat('index.js'))
-    //     .pipe(gulp.dest('./dist'));
 });
