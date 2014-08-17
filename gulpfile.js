@@ -15,7 +15,7 @@ var levels = [
     'desktop.bundles/index'
 ];
 
-gulp.task('build', function () {
+gulp.task('build', ['clean'], function () {
     var tree = bem.objects(levels).pipe(bem.tree());
     var deps = tree.deps('desktop.bundles/index/sepulka');
 
@@ -27,3 +27,5 @@ gulp.task('build', function () {
 gulp.task('clean', function (cb) {
     del(['./dist'], cb);
 });
+
+gulp.task('default', ['build']);
