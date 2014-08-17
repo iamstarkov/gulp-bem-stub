@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var bem = require('gulp-bem');
 var concat = require('gulp-concat');
+var del = require('del');
 
 var levels = [
     // bem-core
@@ -21,4 +22,8 @@ gulp.task('build', function () {
     return deps.src('{bem}.css')
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('clean', function (cb) {
+    del(['./dist'], cb);
 });
