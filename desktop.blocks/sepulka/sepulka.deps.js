@@ -1,7 +1,8 @@
 ({
     shouldDeps: [
         {
-            mods: { theme: 'base' }
+            mod: 'theme',
+            value: 'base'
         }
     ]
 });
