@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/matmuchrapna/gulp-bem-stub",
   "dependencies": {
-    "gulp": "^3.8.6",
     "bower": "^1.3.9",
-    "gulp-concat": "~2.3.4",
+    "del": "^0.1.2",
+    "gulp": "^3.8.6",
     "gulp-bem": "^0.0.5",
-    "del": "^0.1.2"
+    "gulp-concat": "~2.3.4"
   }
 }
