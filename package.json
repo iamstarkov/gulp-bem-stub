@@ -26,6 +26,8 @@
     "del": "^0.1.2",
     "gulp": "^3.8.6",
     "gulp-bem": "^0.0.5",
-    "gulp-concat": "~2.3.4"
+    "gulp-concat": "~2.3.4",
+    "gulp-bem-debug": "^0.1.0",
+    "yargs": "^1.3.1"
   }
 }

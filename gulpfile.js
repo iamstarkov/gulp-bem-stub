@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var bem = require('gulp-bem');
 var concat = require('gulp-concat');
 var del = require('del');
+var debug = require('gulp-bem-debug');
+var argv = require('yargs').alias('d', 'debug').boolean('d').argv;
 
 var levels = [
     // bem-core
@@ -18,6 +20,8 @@ var levels = [
 gulp.task('build', ['clean'], function () {
     var tree = bem.objects(levels).pipe(bem.tree());
     var deps = tree.deps('desktop.bundles/index/sepulka');
+
+    argv.debug && deps.pipe(debug());
 
     return deps.src('{bem}.css')
         .pipe(concat('index.css'))
