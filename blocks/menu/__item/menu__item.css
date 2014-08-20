@@ -1,9 +1,5 @@
 .menu__item
 {
     display: inline-block;
-}
-
-.menu__item + .menu__item
-{
-    margin-right: 1em;
+    padding: 0 10px;
 }
