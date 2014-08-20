@@ -34,5 +34,4 @@ gulp.task('watch', ['build'], function() {
     return gulp.watch(['**/*.css', '**/*.bemjson.js'], ['build']);
 });
 
-
-gulp.task('default', ['build']);
+gulp.task('default', ['watch']);
