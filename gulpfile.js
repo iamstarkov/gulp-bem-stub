@@ -5,6 +5,7 @@ var concat = require('gulp-concat');
 var del = require('del');
 var debug = require('gulp-bem-debug');
 var argv = require('yargs').alias('d', 'debug').boolean('d').argv;
+var buildBranch = require('buildbranch');
 
 var levels = [
     'blocks',
@@ -21,7 +22,7 @@ gulp.task('build', ['clean'], function () {
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
 
-    deps.src('{bem}.bh.js')
+    return deps.src('{bem}.bh.js')
         .pipe(bh(require('./pages/index/page/page.bemjson.js'), 'index.html'))
         .pipe(gulp.dest('./dist'));
 });
@@ -32,6 +33,10 @@ gulp.task('clean', function (cb) {
 
 gulp.task('watch', ['build'], function() {
     return gulp.watch(['**/*.css', '**/*.bemjson.js'], ['build']);
+});
+
+gulp.task('gh', ['build'], function(done) {
+    buildBranch({ folder: 'dist' }, done);
 });
 
 gulp.task('default', ['watch']);
