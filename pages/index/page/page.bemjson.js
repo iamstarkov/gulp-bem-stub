@@ -1,4 +1,4 @@
-({
+module.exports = {
     block: 'page',
     title: 'Gulp BEM is awesome!',
     head: [
@@ -14,6 +14,7 @@
                     elem: 'item',
                     content: {
                         block: 'link',
+                        tag: 'a',
                         attrs: {
                             href: '#' + item
                         },
@@ -23,4 +24,4 @@
             })
         }
     ]
-});
+};

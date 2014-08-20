@@ -1,0 +1,7 @@
+.logo
+{
+    width: 300px;
+    height: 200px;
+    background: url('//placekitten.com/g/600/400');
+    background-size: cover;
+}
