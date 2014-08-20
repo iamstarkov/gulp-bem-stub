@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var bem = require('gulp-bem');
+var bh = require('gulp-bh');
 var concat = require('gulp-concat');
 var del = require('del');
 var debug = require('gulp-bem-debug');
@@ -16,8 +17,12 @@ gulp.task('build', ['clean'], function () {
 
     if (argv.debug) { deps.pipe(debug()); }
 
-    return deps.src('{bem}.css')
+    deps.src('{bem}.css')
         .pipe(concat('index.css'))
+        .pipe(gulp.dest('./dist'));
+
+    deps.src('{bem}.bh.js')
+        .pipe(bh(require('./pages/index/page/page.bemjson.js'), 'index.html'))
         .pipe(gulp.dest('./dist'));
 });
 
