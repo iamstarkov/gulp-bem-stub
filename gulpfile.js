@@ -13,13 +13,13 @@ var levels = [
     // 'libs/bem-components/common.blocks',
     // 'libs/bem-components/desktop.blocks',
     // local
-    'desktop.blocks',
-    'desktop.bundles/index'
+    'blocks',
+    'pages/index'
 ];
 
 gulp.task('build', ['clean'], function () {
     var tree = bem.objects(levels).pipe(bem.tree());
-    var deps = tree.deps('desktop.bundles/index/sepulka');
+    var deps = tree.deps('pages/index/page');
 
     argv.debug && deps.pipe(debug());
 
