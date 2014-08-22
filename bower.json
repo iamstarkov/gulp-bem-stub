@@ -9,7 +9,5 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "v2.4.0",
-    "bem-components": "git://github.com/bem/bem-components.git#v2"
   }
 }
