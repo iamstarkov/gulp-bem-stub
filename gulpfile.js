@@ -7,25 +7,32 @@ var debug = require('gulp-bem-debug');
 var argv = require('yargs').alias('d', 'debug').boolean('d').argv;
 var buildBranch = require('buildbranch');
 
+var deps;
 var levels = [
     'blocks',
     'pages/index'
 ];
 
-gulp.task('build', ['clean'], function () {
+gulp.task('deps', function (done) {
     var tree = bem.objects(levels).pipe(bem.tree());
-    var deps = tree.deps('pages/index/page');
-
+    deps = tree.deps('pages/index/page');
     if (argv.debug) { deps.pipe(debug()); }
+    done();
+});
 
-    deps.src('{bem}.css')
+gulp.task('css', ['deps'], function () {
+    return deps.src('{bem}.css')
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
+});
 
+gulp.task('html', ['deps'], function () {
     return deps.src('{bem}.bh.js')
         .pipe(bh(require('./pages/index/page/page.bemjson.js'), 'index.html'))
         .pipe(gulp.dest('./dist'));
 });
+
+gulp.task('build', ['clean', 'html', 'css']);
 
 gulp.task('clean', function (cb) {
     del(['./dist'], cb);
