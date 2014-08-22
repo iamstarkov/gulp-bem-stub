@@ -9,6 +9,7 @@ var buildBranch = require('buildbranch');
 
 var deps;
 var levels = [
+    'base',
     'blocks',
     'pages/index'
 ];
