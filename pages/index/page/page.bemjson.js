@@ -2,24 +2,17 @@ module.exports = {
     block: 'page',
     content: [
         {
-            block: 'head',
-            tag: 'head',
+            elem: 'head',
             content: [
                 {
-                    block: 'title',
-                    tag: 'title',
-                    content: 'Gulp BEM is awesome!',
+                    elem: 'title',
+                    content: 'Gulp BEM is 2 awesome!',
                 },
-                {
-                    block: 'css',
-                    tag: 'link',
-                    attrs: { href: 'index.css', rel: 'stylesheet' }
-                }
+                { block: 'css', url: 'index.css' }
             ]
         },
         {
-            block: 'body',
-            tag: 'body',
+            elem: 'body',
             content: [
                 { block: 'logo' },
                 {
@@ -38,11 +31,7 @@ module.exports = {
                         };
                     })
                 },
-                {
-                    block: 'js',
-                    tag: 'script',
-                    attrs: { src: 'index.js' }
-                }
+                { block: 'js', url: 'index.js' }
             ]
         }
     ]
