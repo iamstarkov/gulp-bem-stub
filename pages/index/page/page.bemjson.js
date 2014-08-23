@@ -6,7 +6,7 @@ module.exports = {
             content: [
                 {
                     elem: 'title',
-                    content: 'Gulp BEM is 2 awesome!',
+                    content: 'Gulp BEM is awesome!',
                 },
                 { block: 'css', url: 'index.css' }
             ]
