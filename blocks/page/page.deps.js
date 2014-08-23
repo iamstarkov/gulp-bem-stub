@@ -3,5 +3,6 @@ module.exports.expect = [
     { block: 'meta' },
     { block: 'js' },
     { block: 'css' },
-    { block: 'link' }
+    { block: 'link' },
+    { block: 'image' },
 ];
