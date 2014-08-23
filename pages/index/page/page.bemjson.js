@@ -4,10 +4,14 @@ module.exports = {
         {
             elem: 'head',
             content: [
+                { block: 'meta', attrs: { charset: 'utf-8' }},
+                { block: 'meta', attrs: { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' }},
                 {
                     elem: 'title',
                     content: 'Gulp BEM is awesome!',
                 },
+                { block: 'meta', attrs: { name: 'description', content: '' }},
+                { block: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' }},
                 { block: 'css', url: 'index.css' }
             ]
         },
