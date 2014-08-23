@@ -26,13 +26,13 @@ gulp.task('deps', function (done) {
     done();
 });
 
-gulp.task('css', ['deps'], function () {
+gulp.task('css', ['deps', 'clean'], function () {
     return deps.src('{bem}.css')
         .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('html', ['deps'], function () {
+gulp.task('html', ['deps', 'clean'], function () {
     return deps.src('{bem}.bh.js')
         .pipe(bh(require('./pages/index/page/page.bemjson.js'), 'index.html'))
         .pipe(gulp.dest('./dist'));
