@@ -26,10 +26,7 @@ module.exports = {
                             elem: 'item',
                             content: {
                                 block: 'link',
-                                tag: 'a',
-                                attrs: {
-                                    href: '#' + item
-                                },
+                                url: '#' + item,
                                 content: item
                             }
                         };
