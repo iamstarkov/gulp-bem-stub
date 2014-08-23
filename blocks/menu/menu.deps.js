@@ -1,7 +1,3 @@
-({
-    expect: [
-        {
-            elems: ['item']
-        }
-    ]
-});
+module.exports.expect = [
+    { elems: ['item'] }
+];

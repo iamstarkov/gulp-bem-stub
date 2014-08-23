@@ -1,7 +1,8 @@
-({
-    expect: [
-        { block: 'logo' },
-        { block: 'menu' },
-        { block: 'link' }
-    ]
-});
+module.exports.expect = [
+    { block: 'js' },
+    { block: 'css' },
+
+    { block: 'logo' },
+    { block: 'menu' },
+    { block: 'link' }
+];
