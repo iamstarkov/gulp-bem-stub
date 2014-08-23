@@ -15,9 +15,14 @@ var levels = [
 ];
 
 gulp.task('deps', function (done) {
-    var tree = bem.objects(levels).pipe(bem.tree());
+    var tree = bem.objects(levels)
+        .pipe(bem.deps())
+        .pipe(bem.tree());
+
     deps = tree.deps('pages/index/page');
+
     if (argv.debug) { deps.pipe(debug()); }
+
     done();
 });
 
