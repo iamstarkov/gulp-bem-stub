@@ -10,6 +10,7 @@ module.exports = {
                     elem: 'title',
                     content: 'Gulp BEM is awesome!',
                 },
+                { block: 'meta', attrs: { name: 'keywords', content: '' }},
                 { block: 'meta', attrs: { name: 'description', content: '' }},
 
                 { block: 'metalink', url: '/favicon.ico', attrs: { rel: 'icon', type: 'image/x-icon' }},
