@@ -9,5 +9,6 @@
     "libs"
   ],
   "dependencies": {
+    "base": "matmuchrapna/bem-base"
   }
 }
