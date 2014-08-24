@@ -23,13 +23,13 @@ module.exports = {
                     content: [
                         {
                             block: 'image',
-                            mix: [{ block: 'logo', elem: 'gulp' }],
-                            url: '//raw2.github.com/gulpjs/artwork/master/gulp-2x.png'
+                            mix: [{ block: 'logo', elem: 'bem' }],
+                            url: '//bem.info/m/_/20zuV2gLiyoaqrHv9LoBRTmB0Ow.svg'
                         },
                         {
                             block: 'image',
-                            mix: [{ block: 'logo', elem: 'bem' }],
-                            url: '//bem.info/m/_/20zuV2gLiyoaqrHv9LoBRTmB0Ow.svg'
+                            mix: [{ block: 'logo', elem: 'gulp' }],
+                            url: '//raw2.github.com/gulpjs/artwork/master/gulp-2x.png'
                         }
                     ]
                 },
