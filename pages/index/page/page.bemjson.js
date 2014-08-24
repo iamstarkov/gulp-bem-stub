@@ -11,6 +11,10 @@ module.exports = {
                     content: 'Gulp BEM is awesome!',
                 },
                 { block: 'meta', attrs: { name: 'description', content: '' }},
+
+                { block: 'metalink', url: '/favicon.ico', attrs: { rel: 'icon', type: 'image/x-icon' }},
+                { block: 'metalink', url: '/favicon.ico', attrs: { rel: 'shortcut icon', type: 'image/x-icon' }},
+
                 { block: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' }},
                 { block: 'css', url: 'index.css' }
             ]
