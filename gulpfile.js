@@ -11,7 +11,8 @@ var less = require('gulp-less');
 var deps;
 var levels = [
     'libs/base',
-    'bootstrap',
+    'bootstrap/core',
+    'bootstrap/mixins',
     'blocks',
     'pages/index'
 ];
@@ -56,3 +57,16 @@ gulp.task('gh', ['build'], function(done) {
 });
 
 gulp.task('default', ['watch']);
+
+
+/**
+ * Bootstra splitting stages
+ * Open ./node_modules/less/bootstrap.less
+ * Copy ./node_modules/less/variables.less -> ./variables/variables.less
+ * Go to mixins
+ * Handle hide-text.less:
+ *     Copy ./node_modules/less/mixins/hide-text.less -> ./hide-text/hide-text.less
+ *     Create ./hide-text/text-hide.less and add block "hide-text" to expect deps
+ *
+ */
+
