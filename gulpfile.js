@@ -6,10 +6,12 @@ var del = require('del');
 var debug = require('gulp-bem-debug');
 var argv = require('yargs').alias('d', 'debug').boolean('d').argv;
 var buildBranch = require('buildbranch');
+var less = require('gulp-less');
 
 var deps;
 var levels = [
     'libs/base',
+    'bootstrap',
     'blocks',
     'pages/index'
 ];
@@ -26,9 +28,10 @@ gulp.task('deps', function (done) {
     done();
 });
 
-gulp.task('css', ['deps', 'clean'], function () {
-    return deps.src('{bem}.css')
-        .pipe(concat('index.css'))
+gulp.task('less', ['deps', 'clean'], function () {
+    return deps.src('{bem}.less')
+        .pipe(concat('index.less'))
+        .pipe(less())
         .pipe(gulp.dest('./dist'));
 });
 
@@ -38,7 +41,7 @@ gulp.task('html', ['deps', 'clean'], function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['clean', 'html', 'css']);
+gulp.task('build', ['clean', 'html', 'less']);
 
 gulp.task('clean', function (cb) {
     del(['./dist'], cb);
