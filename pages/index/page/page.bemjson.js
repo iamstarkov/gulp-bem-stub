@@ -40,7 +40,7 @@ module.exports = {
                 },
                 {
                     block: 'tagline',
-                    content: 'What happens when two powerfull technology meet each other? Awesomness!'
+                    content: 'What happens when two powerful technologies meet each other? Awesomness!'
                 },
                 {
                     block: 'link',
