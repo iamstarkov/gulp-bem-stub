@@ -1,9 +1,9 @@
 module.exports.expect = [
     { block: 'variables' },
-    { block: 'text-hide' },
+    { block: 'mixins' },
     /*
     { block: 'logo' },
     { block: 'tagline' },
-    { block: 'menu' }
+    { block: 'menu' },
     */
 ];
