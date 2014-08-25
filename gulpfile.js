@@ -49,7 +49,12 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('watch', ['build'], function() {
-    return gulp.watch(['**/*.css', '**/*.bemjson.js'], ['build']);
+    return gulp.watch([
+        '{blocks,pages}/**/*.less',
+        '{blocks,pages}/**/*.deps.js',
+        '{blocks,pages}/**/*.bh.js',
+        '{blocks,pages}/**/*.bemjson.js'
+    ], ['build']);
 });
 
 gulp.task('gh', ['build'], function(done) {
