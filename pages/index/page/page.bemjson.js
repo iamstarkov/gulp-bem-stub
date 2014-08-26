@@ -24,6 +24,11 @@ module.exports = {
             elem: 'body',
             content: [
                 {
+                    block: 'heading',
+                    level: 1,
+                    content: 'Welcome to gulp-bem-stub!'
+                },
+                {
                     block: 'logo',
                     content: [
                         {
@@ -39,7 +44,9 @@ module.exports = {
                     ]
                 },
                 {
-                    block: 'tagline',
+                    block: 'heading',
+                    level: 2,
+                    mix: [{ block: 'tagline' }],
                     content: 'What happens when two powerful technologies meet each other? Awesomness!'
                 },
                 {
