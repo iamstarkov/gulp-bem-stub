@@ -22,39 +22,63 @@ module.exports = {
         },
         {
             elem: 'body',
-            content: [
-                {
-                    block: 'heading',
-                    level: 1,
-                    content: 'Welcome to gulp-bem-stub!'
-                },
-                {
-                    block: 'logo',
-                    content: [
-                        {
-                            block: 'image',
-                            mix: [{ block: 'logo', elem: 'bem' }],
-                            url: '//bem.info/m/_/20zuV2gLiyoaqrHv9LoBRTmB0Ow.svg'
-                        },
-                        {
-                            block: 'image',
-                            mix: [{ block: 'logo', elem: 'gulp' }],
-                            url: '//raw2.github.com/gulpjs/artwork/master/gulp-2x.png'
-                        }
-                    ]
-                },
-                {
-                    block: 'heading',
-                    level: 2,
-                    mix: [{ block: 'tagline' }],
-                    content: 'What happens when two powerful technologies meet each other? Awesomness!'
-                },
-                {
-                    block: 'link',
-                    url: 'https://github.com/floatdrop/gulp-bem/',
-                    content: 'Stay tuned'
-                }
-            ]
+            content: {
+                block: 'grid',
+                content: [
+                    {
+                        elem: 'row',
+                        content: [
+                            {
+                                elem: 'cell-xs',
+                                size: 12,
+                                content: {
+                                    block: 'heading',
+                                    level: 1,
+                                    content: 'Welcome to gulp-bem-stub!'
+                                }
+                            },
+                            {
+                                elem: 'cell-xs',
+                                size: 12,
+                                content: {
+                                    block: 'logo',
+                                    content: [
+                                        {
+                                            block: 'image',
+                                            mix: [{ block: 'logo', elem: 'bem' }],
+                                            url: '//bem.info/m/_/20zuV2gLiyoaqrHv9LoBRTmB0Ow.svg'
+                                        },
+                                        {
+                                            block: 'image',
+                                            mix: [{ block: 'logo', elem: 'gulp' }],
+                                            url: '//raw2.github.com/gulpjs/artwork/master/gulp-2x.png'
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                elem: 'cell-xs',
+                                size: 12,
+                                content: {
+                                    block: 'heading',
+                                    level: 2,
+                                    mix: [{ block: 'tagline' }],
+                                    content: 'What happens when two powerful technologies meet each other? Awesomness!'
+                                }
+                            },
+                            {
+                                elem: 'cell-xs',
+                                size: 2,
+                                content: {
+                                    block: 'link',
+                                    url: 'https://github.com/floatdrop/gulp-bem/',
+                                    content: 'Stay tuned'
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     ]
 };

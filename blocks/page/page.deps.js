@@ -1,4 +1,6 @@
 module.exports.expect = [
+    { block: 'grid' },
+
     { elems: ['head', 'title', 'body'] },
     { block: 'meta' },
     { block: 'metalink' },
@@ -6,5 +8,5 @@ module.exports.expect = [
     { block: 'css' },
     { block: 'link' },
     { block: 'image' },
-    { block: 'heading' },
+    { block: 'heading' }
 ];
