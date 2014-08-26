@@ -12,7 +12,6 @@ var deps;
 var levels = [
     'libs/base',
     'libs/bootstrap/core',
-    'libs/bootstrap/mixins',
     'libs/bootstrap/blocks',
     'blocks',
     'pages/index'
