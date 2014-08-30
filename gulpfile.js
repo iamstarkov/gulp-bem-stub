@@ -37,7 +37,7 @@ gulp.task('less', ['deps', 'clean'], function () {
 });
 
 gulp.task('html', ['deps', 'clean'], function () {
-    delete require.cache[require.resolve('./pages/index/index.bemjson.js')];
+    delete require.cache[require.resolve('./pages/index/page/page.bemjson.js')];
     return deps.src('{bem}.bh.js')
         .pipe(bh(require('./pages/index/page/page.bemjson.js'), 'index.html'))
         .pipe(gulp.dest('./dist'));
