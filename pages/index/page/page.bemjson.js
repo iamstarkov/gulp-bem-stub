@@ -30,49 +30,41 @@ module.exports = {
                         content: [
                             {
                                 elem: 'cell-xs',
-                                size: 12,
+                                mods: { size: 12 },
                                 content: {
                                     block: 'heading',
-                                    level: 1,
+                                    mods: { level: 1 },
+                                    mix: [{ block: 'tagline' }],
                                     content: 'Welcome to gulp-bem-stub!'
                                 }
                             },
                             {
                                 elem: 'cell-xs',
-                                size: 12,
+                                mods: { size: 12 },
                                 content: {
                                     block: 'logo',
                                     content: [
                                         {
                                             block: 'image',
                                             mix: [{ block: 'logo', elem: 'bem' }],
-                                            url: '//bem.info/m/_/20zuV2gLiyoaqrHv9LoBRTmB0Ow.svg'
+                                            url: 'http://getbem.com/img/b.svg'
                                         },
                                         {
                                             block: 'image',
                                             mix: [{ block: 'logo', elem: 'gulp' }],
-                                            url: '//raw2.github.com/gulpjs/artwork/master/gulp-2x.png'
+                                            url: 'https://raw2.github.com/gulpjs/artwork/master/gulp-2x.png'
                                         }
                                     ]
                                 }
                             },
                             {
                                 elem: 'cell-xs',
-                                size: 12,
+                                mods: { size: 12 },
                                 content: {
                                     block: 'heading',
-                                    level: 2,
+                                    mods: { level: 2 },
                                     mix: [{ block: 'tagline' }],
                                     content: 'What happens when two powerful technologies meet each other? Awesomness!'
-                                }
-                            },
-                            {
-                                elem: 'cell-xs',
-                                size: 2,
-                                content: {
-                                    block: 'link',
-                                    url: 'https://github.com/floatdrop/gulp-bem/',
-                                    content: 'Stay tuned'
                                 }
                             }
                         ]
