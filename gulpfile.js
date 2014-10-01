@@ -6,13 +6,12 @@ var del = require('del');
 var debug = require('gulp-bem-debug');
 var argv = require('yargs').alias('d', 'debug').boolean('d').argv;
 var buildBranch = require('buildbranch');
-var less = require('gulp-less');
 
 var deps;
 var levels = [
     'libs/base',
-    'libs/bootstrap/core',
-    'libs/bootstrap/blocks',
+    'libs/bootstrap/levels/core-css',
+    'libs/bootstrap/levels/blocks',
     'blocks',
     'pages/index'
 ];
@@ -29,10 +28,9 @@ gulp.task('deps', function (done) {
     done();
 });
 
-gulp.task('less', ['deps', 'clean'], function () {
-    return deps.src('{bem}.less')
-        .pipe(concat('index.less'))
-        .pipe(less())
+gulp.task('css', ['deps', 'clean'], function () {
+    return deps.src('{bem}.css')
+        .pipe(concat('index.css'))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -43,7 +41,7 @@ gulp.task('html', ['deps', 'clean'], function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build', ['clean', 'html', 'less']);
+gulp.task('build', ['clean', 'html', 'css']);
 
 gulp.task('clean', function (cb) {
     del(['./dist'], cb);
@@ -51,7 +49,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('watch', ['build'], function() {
     return gulp.watch([
-        '{blocks,pages}/**/*.less',
+        '{blocks,pages}/**/*.css',
         '{blocks,pages}/**/*.deps.js',
         '{blocks,pages}/**/*.bh.js',
         '{blocks,pages}/**/*.bemjson.js'
