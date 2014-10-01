@@ -9,5 +9,6 @@ module.exports.expect = [
     { block: 'image' },
 
     { block: 'grid' },
-    { block: 'heading' }
+    { block: 'heading' },
+    { block: 'normalize' }
 ];

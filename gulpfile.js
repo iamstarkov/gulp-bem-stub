@@ -11,7 +11,7 @@ var deps;
 var levels = [
     'libs/base',
     'libs/bootstrap/levels/core-css',
-    'libs/bootstrap/levels/blocks',
+    'libs/bootstrap/levels/normalize',
     'blocks',
     'pages/index'
 ];
@@ -57,7 +57,7 @@ gulp.task('watch', ['build'], function() {
 });
 
 gulp.task('gh', ['build'], function(done) {
-    buildBranch({ folder: 'dist' }, done);
+    buildBranch({ folder: 'dist', ignore: ['libs'] }, done);
 });
 
 gulp.task('default', ['watch']);
