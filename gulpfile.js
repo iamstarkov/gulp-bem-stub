@@ -10,8 +10,11 @@ var buildBranch = require('buildbranch');
 var deps;
 var levels = [
     'libs/base',
-    'libs/bootstrap/levels/core-css',
     'libs/bootstrap/levels/normalize',
+    'libs/bootstrap/levels/print',
+    'libs/bootstrap/levels/glyphicons',
+    'libs/bootstrap/levels/scaffolding',
+    'libs/bootstrap/levels/core-css',
     'blocks',
     'pages/index'
 ];
