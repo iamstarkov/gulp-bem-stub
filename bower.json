@@ -10,6 +10,6 @@
   ],
   "dependencies": {
     "base": "matmuchrapna/bem-base",
-    "bootstrap": "matmuchrapna/bem-bootstrap"
+    "bootstrap": "bem-bootstrap#v0.1.2"
   }
 }
