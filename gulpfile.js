@@ -14,7 +14,7 @@ var levels = [
     'libs/bootstrap/levels/print',
     'libs/bootstrap/levels/glyphicons',
     'libs/bootstrap/levels/scaffolding',
-    'libs/bootstrap/levels/core-css',
+    'libs/bootstrap/levels/core',
     'blocks',
     'pages/index'
 ];
