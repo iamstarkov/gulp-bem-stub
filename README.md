@@ -1,5 +1,7 @@
 # gulp-bem-stub
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/iamstarkov/gulp-bem-stub.svg)](https://greenkeeper.io/)
+
 This project contains example [gulpfile.js](https://github.com/matmuchrapna/gulp-bem-stub/blob/master/gulpfile.js) to help you start using [bem](http://getbem.com) with [gulp](https://github.com/gulpjs/gulp).
 
 ## Usage
